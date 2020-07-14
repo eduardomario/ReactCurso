@@ -1,0 +1,42 @@
+.card-detail-open {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.card-detail-close {
+    display: none;
+}
+
+.card-detial-info {
+    background-color: white;
+    border-radius: 10px;
+    width: 70vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.task-title {
+    margin: 8px 0;
+    color: black;
+}
+
+.task-subtitle {
+    margin: 8px 0;
+    color: black;
+}
+
+.task-text {
+    margin: 5px 0;
+    color: black;
+}
