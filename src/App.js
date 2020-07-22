@@ -5,7 +5,10 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NOTFOUND404 from './components/404';
 import Jira from './components/Jira/Jira';
 import Page from './components/Page';
+import ConsumePage from './components/Consume/Consume';
 import Navbar from './components/Navbar';
+import Reference from './components/Reference/Reference';
+import Hooks from './components/Hooks/Hook';
 
 /*function App() {
   return (
@@ -39,14 +42,14 @@ const Router = () => {
       {showMenu ? <Navbar hide={toggleMenu}/> : <button onClick={toggleMenu}>Show Menu</button>}
       <Switch>
         <Route exact path='/' component={Jira}/>
-        <Route path='/Page1'
-          render = {(routeProps) => <Page {...routeProps} name='Page1'></Page>}
+        <Route path='/Consume'
+          render = {(routeProps) => <ConsumePage></ConsumePage>}
         />
-        <Route path='/Page2'
-          render = {(routeProps) => <Page {...routeProps} name='Page2'></Page>}
+        <Route path='/Reference'
+          render = {(routeProps) => <Reference></Reference>}
         />
-        <Route path='/Page3'
-          render = {(routeProps) => <Page {...routeProps} name='Page3'></Page>}
+        <Route path='/Hook'
+          render = {(routeProps) => <Hooks></Hooks>}
         />
         <Route path='/Page4'
           render = {(routeProps) => <Page {...routeProps} name='Page4'></Page>}

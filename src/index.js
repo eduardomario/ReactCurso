@@ -9,6 +9,9 @@ import NewTask from './components/Task/NewTask/NewTask';
 import Hooks from './components/Hooks/Hook';
 import Jira from './components/Jira/Jira';
 import Router from './App';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Store from './components/Store';
 
 function Hello(props) {
   return <div>Hello {props.toWhat}</div>;
@@ -175,6 +178,18 @@ function RenderAcions(props) {
   return <div style={styles}>{listItems}</div>
 }
 
+/*const ReduxStorage = (
+  <Provider store={Store}>
+    <BrowserRouter>
+      <Switch>
+        <Route path='/results' component={Results}/>
+        <Route path='/details/:itemId' component={Details}/>
+        <Redirect path='/' to='/results'/>
+      </Switch>
+    </BrowserRouter>
+  </Provider>
+)*/
+
 const user = { firstName: 'Eduardo', lastName: 'Pacreu'};
 const element = <h1>Hello, {formatName(user)}</h1>;
 const numbers = [1, 2, 3, 4, 5]
@@ -216,6 +231,11 @@ ReactDOM.render(
   </React.StrictMode>],
   document.getElementById('root')
 );
+
+/*ReactDOM.render(
+  [ReduxStorage],
+  document.getElementById('root')
+);*/
 
 /*ReactDOM.render(
   [<React.StrictMode>
